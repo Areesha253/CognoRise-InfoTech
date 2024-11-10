@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/bmi.png" />
+
+    <!-- Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="vendors/css/bootstrap.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="vendors/css/all.min.css" />
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="vendors/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="vendors/css/owl.theme.default.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="bmi-calculator-container">
+        <div class="row gy-5">
+          <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <form class="bmi-form">
+              <h1>BMI Calculator</h1>
+              <hr />
+              <div class="bmi-form-row">
+                <div class="row">
+                  <div class="col-lg-3 col-12">
+                    <label class="bmi-form-label"
+                      >Name <span class="required-field">*</span>:</label
+                    >
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="text" placeholder="Ex: John" id="name" />
+                  </div>
+                </div>
+              </div>
+              <div class="bmi-form-row">
+                <div class="row">
+                  <div class="col-lg-3 col-12">
+                    <label class="bmi-form-label"
+                      >Gender <span class="required-field">*</span>:</label
+                    >
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <div class="user-gender-checkbox">
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="male"
+                        value="male" />
+                      <span class="gender-option">Male</span>
+                      <input
+                        type="radio"
+                        name="gender"
+                        id="female"
+                        value="female" />
+                      <span class="gender-option">Female</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bmi-form-row">
+                <div class="row">
+                  <div class="col-lg-3 col-12">
+                    <label class="bmi-form-label"
+                      >Age <span class="required-field">*</span>:</label
+                    >
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="number" id="age" placeholder="Ex: 23" />
+                  </div>
+                </div>
+              </div>
+              <div class="bmi-form-row">
+                <div class="row">
+                  <div class="col-lg-3 col-12">
+                    <label class="bmi-form-label"
+                      >Height (cm) <span class="required-field">*</span>:</label
+                    >
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="number" id="height" placeholder="Ex: 164" />
+                  </div>
+                </div>
+              </div>
+              <div class="bmi-form-row">
+                <div class="row">
+                  <div class="col-lg-3 col-12">
+                    <label class="bmi-form-label"
+                      >Weight (kg) <span class="required-field">*</span>:</label
+                    >
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="number" id="weight" placeholder="Ex: 60" />
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <button
+                class="calculate-bmi-btn"
+                type="submit"
+                id="calculateBmiBtn"
+                >Calculate</button
+              >
+            </form>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+            <div class="row">
+              <div class="col-12">
+                <h5 class="bmi-result"></h5>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 col-12">
+                <div class="bmi-range-result">
+                  <img
+                    src="img/underweight-range.png"
+                    class="human-img-width"
+                    alt="underweight-human-img" />
+                  <span class="range-category-txt" data-category="Underweight"
+                    >Underweight</span
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="bmi-range-result">
+                  <img
+                    src="img/normal-range.png"
+                    class="human-img-width"
+                    alt="normal-human-img" />
+                  <span class="range-category-txt" data-category="Normal"
+                    >Normal</span
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="bmi-range-result">
+                  <img
+                    src="img/overweight-range.png"
+                    class="human-img-width"
+                    alt="overweight-human-img" />
+                  <span class="range-category-txt" data-category="Overweight"
+                    >Overweight</span
+                  >
+                </div>
+              </div>
+              <div class="col-lg-3 col-12">
+                <div class="bmi-range-result">
+                  <img
+                    src="img/obese-range.png"
+                    class="human-img-width"
+                    alt="obese-human-img" />
+                  <span class="range-category-txt" data-category="Obese"
+                    >Obese</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <ul class="range-details mt-5">
+                  <li class="range-category-txt" data-category="Underweight"
+                    >Underweight: Less than 18.5.</li
+                  >
+                  <li class="range-category-txt" data-category="Normal"
+                    >Normal: 18.5 to less than 25.</li
+                  >
+                  <li class="range-category-txt" data-category="Overweight"
+                    >Overweight: 25 to less than 30.</li
+                  >
+                  <li class="range-category-txt" data-category="Obese"
+                    >Obesity: 30 or greater.</li
+                  >
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="vendors/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="vendors/js/all.min.js"></script>
+    <!-- jQuery -->
+    <script src="vendors/js/jquery-3.7.0.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="vendors/js/owl.carousel.min.js"></script>
+    <script src="vendors/js/owl.carousel.js"></script>
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
