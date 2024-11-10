@@ -1,4 +1,4 @@
-CognoRise InfoTech Internship Projects
+**CognoRise InfoTech Internship Projects**
 
 Welcome to my repository showcasing the projects I’ve worked on during my internship at CognoRise InfoTech. This space highlights my progress and skills in web development as I build responsive, interactive, and user-friendly web applications.
 
