@@ -1,114 +1,75 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html,
 body {
-  background: linear-gradient(135deg, #110715, #a01a7d);
-  font-family: "Raleway", sans-serif;
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+  background: url(../img/Awesome\ Math\ Desktop\ Wallpapers\ -\ WallpaperAccess.jpeg);
 }
-ul {
-  padding: 0;
-}
-.container {
-  min-height: 100vh;
-  display: flex;
-}
-.to-do-list {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 10px 25px;
-  border-radius: 25px;
-  border: none;
-  width: 600px;
-  margin: auto;
-}
-.main-Heading {
-  font-size: 32px;
-  color: #110715;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-.list-heading-text img {
-  width: 40px;
-}
-.input-field-with-btn {
-  background-color: #edeef0;
+
+.iphone-calculator {
+  width: 320px;
+  margin: 50px auto;
+  background-color: #000;
+  padding: 20px 10px;
+  border: 1px solid #2b2a2a;
   border-radius: 50px;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 20px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1),
+    0 8px 25px rgba(255, 255, 255, 0.05);
 }
-#textInput {
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 15px;
+.calculation-box {
+  display: flex;
+  align-items: flex-end;
+  height: 150px;
+}
+.calculation-box input {
   width: 100%;
-}
-.add-task-btn {
+  height: 60px;
+  font-size: 38px;
+  text-align: right;
+  padding: 10px 15px;
   border: none;
+  background-color: transparent;
+  color: #ffffff;
   outline: none;
-  padding: 16px 50px;
-  background-color: #a01a7d;
-  color: #fff;
-  font-size: 16px;
+}
+
+.calculation-operators {
+  margin-top: 20px;
+}
+
+.operators {
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+}
+.top-row,
+.top-row i {
+  background-color: #a5a5a5;
+  color: #010101;
+  font-weight: bold;
+}
+.arithematic-operators {
+  background-color: #ffa214;
+  color: #ffff;
+}
+.operators:nth-child(17) {
+  width: 135px;
   border-radius: 50px;
 }
-.task-items {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  flex-direction: column;
+.point-size {
+  font-size: 5px;
 }
-.task {
-  list-style: none;
-  padding: 8px 50px;
-  cursor: pointer;
-  position: relative;
-  font-size: 18px;
-  color: #110715;
-  font-weight: 400;
-  border: 1px solid #555;
-  border-radius: 25px;
-  margin-bottom: 15px;
-}
-.task::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 8px;
-  background: url(../img/icons8-uncheck-mark-24.png) no-repeat center;
-  height: 18px;
-  width: 18px;
-  background-size: cover;
-  border-radius: 50%;
-}
-.task.checked-task {
-  color: #a01a7d;
-  text-decoration: line-through;
-}
-.task.checked-task::before {
-  background: url(../img/icons8-check-mark-16.png) no-repeat center center/cover;
-}
-.task span {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 40px;
-  height: 40px;
-  font-size: 22px;
-  color: #555;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.task span:hover {
-  background: #edeef0;
+.numbers {
+  background-color: #333333;
+  color: #fff;
 }

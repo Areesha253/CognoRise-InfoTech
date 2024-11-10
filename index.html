@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do List</title>
+    <title>Calculator</title>
 
     <!----FAVICON---->
-    <link rel="icon" type="image/png" href="img/icons8-to-do-list-64.png" />
+    <link rel="icon" type="image/png" href="img/calculator-variant.png" />
 
     <!-- --BOOTSTRAP 5 CDN LINKS-- -->
     <link rel="stylesheet" href="vendors/css/bootstrap.min.css" />
@@ -20,29 +20,68 @@
 
     <!-- --CUSTOM CSS-- -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
   </head>
 
   <body>
     <div class="container">
-      <div class="to-do-list">
-        <div
-          class="list-heading-text d-flex align-items-center justify-content-between">
-          <h1 class="main-Heading">To-Do List</h1>
-          <img
-            src="img/icons8-to-do-list-64.png"
-            alt="to-do-list-icon"
-            class="img-fluid" />
+      <div class="calculator">
+        <div class="iphone-calculator">
+          <div class="calculation-box">
+            <input type="text" id="display" disabled />
+          </div>
+          <div class="calculation-operators">
+            <button class="operators top-row" data-action="clear">AC</button>
+            <button class="operators top-row" data-action="add-subtract">
+              <i class="fa-solid fa-plus-minus"></i>
+            </button>
+            <button class="operators top-row" data-action="percentage">
+              <i class="fa-solid fa-percent"></i>
+            </button>
+            <button
+              class="operators arithematic-operators"
+              data-action="divide"
+            >
+              <i class="fa-solid fa-divide"></i>
+            </button>
+            <button class="operators numbers" data-action="seven">7</button>
+            <button class="operators numbers" data-action="eight">8</button>
+            <button class="operators numbers" data-action="nine">9</button>
+            <button
+              class="operators arithematic-operators"
+              data-action="multiply"
+            >
+              <i class="fa-solid fa-multiply"></i>
+            </button>
+            <button class="operators numbers" data-action="four">4</button>
+            <button class="operators numbers" data-action="five">5</button>
+            <button class="operators numbers" data-action="six">6</button>
+            <button
+              class="operators arithematic-operators"
+              data-action="subtract"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <button class="operators numbers" data-action="one">1</button>
+            <button class="operators numbers" data-action="two">2</button>
+            <button class="operators numbers" data-action="three">3</button>
+            <button class="operators arithematic-operators" data-action="add">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <button class="operators numbers" data-action="zero">0</button>
+            <button class="operators numbers" data-action="mantissa">
+              <i
+                class="fa-solid fa-circle point-size"
+                style="color: #ffffff"
+              ></i>
+            </button>
+            <button
+              class="operators arithematic-operators"
+              data-action="calculate"
+            >
+              <i class="fa-solid fa-equals" style="color: #ffffff"></i>
+            </button>
+          </div>
         </div>
-        <hr />
-        <div class="input-field-with-btn">
-          <input
-            type="text"
-            placeholder="Enter your text here..."
-            id="textInput" />
-          <button class="add-task-btn"> Add </button>
-        </div>
-        <ul class="task-list-items"> </ul>
       </div>
     </div>
 
