@@ -1,14 +1,23 @@
-/* 
-@media only screen and (max-width:1200px) {
+@media only screen and (max-width:600px){
+    .main-heading{
+        font-size: 18px;
+    }
+    #textInput{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .add-txt-btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    .list-items li{
+        font-size: 12px;
 
+    }
+    .list-items li::before{
+        top: 8px;
+    }
+    .list-items span{
+        top: -5px;
+    }
 }
-
-@media only screen and (max-width:991px) {
-}
-
-@media only screen and (max-width:768px) {
-}
-
-@media only screen and (max-width:576px) {
-
-} */

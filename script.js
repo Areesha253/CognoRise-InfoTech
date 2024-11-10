@@ -1,40 +1,22 @@
-$(".bmi-form").on("submit", function (e) {
-  e.preventDefault();
+var taskInputBox = $("#textInput");
 
-  var name = $("#name").val();
-  var gender = $("#male:checked, #female:checked");
-  var age = parseInt($("#age").val());
-  var height = $("#height").val() / 100;
-  var weight = $("#weight").val();
-
-  if (!name || !gender.length || !age || !height || !weight) {
-    alert("Please Fill up All Fields!");
-    return;
-  }
-
-  const bmi = (weight / (height * height)).toFixed(2);
-
-  let category;
-  if (bmi < 18.5) {
-    category = "Underweight";
-  } else if (bmi < 25) {
-    category = "Normal";
-  } else if (bmi < 30) {
-    category = "Overweight";
+$(".add-task-btn").on("click", () => {
+  if (taskInputBox.val() === "") {
+    return alert("Enter your Task");
   } else {
-    category = "Obese";
+    var taskList = `
+      <li class="task"> 
+       ${taskInputBox.val()}
+       <span class="remove-task">\u00d7</span>
+      </li>
+      `;
+    $(".task-list-items").append(taskList);
+    taskInputBox.val("");
   }
-
-  $(".bmi-result").text(`Your BMI is: ${bmi} (${category})`);
-
-  $(".bmi-range-result, .range-category-txt").removeClass("highlighted");
-
-  $(".range-category-txt").each(function () {
-    var targetedCategory = $(this);
-    var categoryData = targetedCategory.data("category");
-    if (categoryData === category) {
-      targetedCategory.closest(".bmi-range-result").addClass("highlighted");
-      targetedCategory.addClass("highlighted");
-    }
-  });
+});
+$(".task-list-items").on("click", ".task", function () {
+  $(this).toggleClass("checked-task");
+});
+$(".task-list-items").on("click", ".remove-task", function () {
+  $(this).parent().remove();
 });
